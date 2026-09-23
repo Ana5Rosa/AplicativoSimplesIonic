@@ -8,7 +8,7 @@ const IonCardConfig: React.FC<ContainerProps> = () => {
   return (
     <IonCard>
       <div className="card-image-container">
-        <img alt="Ana Claudia com Bruno Henrique no colo" src="src\img\foto1.jpg" />
+        <img alt="Ana Claudia com Bruno Henrique no colo" src="public\foto1.jpg" />
       </div>
       <IonCardHeader>
         <IonCardTitle>Ana e Bruno</IonCardTitle>
