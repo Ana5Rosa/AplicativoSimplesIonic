@@ -27,9 +27,18 @@ jobs:
       - name: Build Web App
         run: npm run build
 
+      - name: Fix Capacitor Config
+        run: |
+          echo '{
+            "appId": "com.aplicativo.simples",
+            "appName": "AplicativoSimples",
+            "webDir": "dist",
+            "bundledWebRuntime": false
+          }' > capacitor.config.json
+
       - name: Add and Sync Android Platform
         run: |
-          npx @capacitor/cli add android || true
+          npx @capacitor/cli add android
           npx @capacitor/cli sync android
 
       - name: Make Gradlew Executable
